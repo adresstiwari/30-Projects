@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Activity</title>
+</head>
+<body>
+    <h1>Please Click on button, to know what I am doing</h1>
+    <button class="acts">Something..</button>
+    <button class="acts">Nothing..</button>
+
+    <script>
+        function ChangeAct(event) {
+            const changeText = event.target.innerHTML;
+            document.querySelector("h1").innerHTML = `I am doing ${changeText}`;
+
+            // Check if "Go Back" button already exists
+            let goBackBtn = document.getElementById("goBackBtn");
+            if (!goBackBtn) {
+                goBackBtn = document.createElement("button");
+                goBackBtn.textContent = "Go Back";
+                goBackBtn.id = "goBackBtn";
+                goBackBtn.addEventListener("click", function () {
+                    document.querySelector("h1").innerHTML = "Please Click on button, to know what I am doing";
+                    goBackBtn.remove();
+                removeBtn = document.getElementsByClassName("acts")
+                removeBtn.remove();
+                });
+                document.body.appendChild(goBackBtn);
+               
+            }
+
+            console.log(changeText);
+        }
+
+        // Add click listeners to existing buttons
+        const actButtons = document.getElementsByClassName("acts");
+        for (let btn of actButtons) {
+            btn.addEventListener("click", ChangeAct);
+        }
+    </script>
+</body>
+</html>
