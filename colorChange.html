@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+      background-color: #c4abab;
+      margin: 0;
+      height: 100vh; 
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center;    
+    }
+    h1 {
+      color: black;
+    }
+    button {
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      background-color: #954949;
+      border: 3px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <h1>Click here for changing colour</h1>
+    <button>click me </button>
+</body>
+<script>
+    
+
+const colors = {
+  red: "#FF0000",
+  green: "#00FF00",
+  blue: "#0000FF",
+  yellow: "#FFFF00",
+  cyan: "#00FFFF",
+  magenta: "#FF00FF",
+  orange: "#FFA500",
+  pink: "#FFC0CB",
+  purple: "#800080",
+  lime: "#BFFF00",
+  teal: "#008080",
+  indigo: "#4B0082",
+  violet: "#EE82EE",
+  gold: "#FFD700",
+  silver: "#C0C0C0",
+  maroon: "#800000",
+  navy: "#000080",
+  olive: "#808000",
+  brown: "#A52A2A",
+  coral: "#FF7F50"
+};
+bgcColor= Object.values(colors);
+let num = 0;
+let intervalId = null;
+
+
+function changeColor (){
+    
+    document.body.style.backgroundColor=bgcColor[num];
+    num++;
+if (num >= bgcColor.length){
+    num=0;
+}
+}
+function stopChangingColor(){
+
+}
+document.querySelector("button").addEventListener("click",()=>{
+    if (intervalId === null){
+         intervalId=setInterval(changeColor, 100)
+     }
+     else{
+        clearInterval(intervalId);
+    intervalId = null;
+       document.body.style.backgroundColor = "#c4abab";
+       
+     };
+// document.querySelector("button").addEventListener()
+   
+});
+
+</script>
+</html>
