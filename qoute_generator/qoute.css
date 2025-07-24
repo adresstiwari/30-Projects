@@ -1,0 +1,137 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Bitcount:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bitcount", system-ui;
+}
+body{
+    background: #bbc6fa;
+}
+.qoute-box{
+    background: #fff;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.qoute-box h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.qoute-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(23,125,229);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.qoute-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+}
+.qoute-box blockquote::before, .qoute-box blockquote::after{
+    content: '"';
+}
+.qoute-box span{
+    display:block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+.qoute-box span::before{
+    content: '';
+    width:20px ;
+    height: 2px;
+    background: rgb(23,125,229);
+    position: absolute;
+    top: 50%;
+    left: -30%;
+
+}
+.qoute-box div{
+    width:100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.qoute-box button{
+    background: rgb(23,125,229);
+    color:#fff;
+    border-radius: 25px;
+    border: 1px solid regb(23, 124,229);
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+    padding: 5px;
+    cursor: pointer;
+} */
+
+
+body {
+  background: #f0f8ff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quote-box {
+  background: #fff;
+  padding: 30px;
+  width: 400px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#quote {
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: #555;
+}
+
+#author {
+  display: block;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #777;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button, a {
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover, a:hover {
+  background: #0056b3;
+}
